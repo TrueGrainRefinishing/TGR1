@@ -4,9 +4,350 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TrueGrain Refinishing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    :root {
+      --neutral-light: #f8f9fa;
+      --neutral-dark: #1f1f1f;
+      --accent-gold: #c6a664;
+      --accent-gold-hover: #a98e51;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--neutral-light);
+      color: var(--neutral-dark);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    header img { height: 60px; }
+    nav a {
+      color: var(--neutral-dark);
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--accent-gold);
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1600585153109-3d4d3e2aa1b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    .hero a.button {
+      margin-top: 30px;
+      display: inline-block;
+      background-color: var(--accent-gold);
+      color: white;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .hero a.button:hover {
+      background-color: var(--accent-gold-hover);
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group button {
+      padding: 14px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .form-group button {
+      background-color: var(--accent-gold);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .form-group button:hover {
+      background-color: var(--accent-gold-hover);
+    }
+    .form-group input[type="file"] {
+      padding: 10px;
+      background: white;
+    }
+    footer {
+      background-color: #1f1f1f;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    footer p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<style>
+  .cta-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--accent-gold);
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    font-weight: 600;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cta-banner button {
+    background: white;
+    color: var(--accent-gold);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
 </head>
 <body>
-  <h1>TrueGrain Refinishing Full Website</h1>
-  <p>This placeholder confirms that the full canvas content would go here for index.html</p>
+  <header>
+    <img src="logo.png" alt="TrueGrain Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" style="color: var(--accent-gold); font-weight: 700;">Book Now</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1600585153109-3d4d3e2aa1b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; height: 90vh; display: flex; justify-content: center; align-items: center; color: white; text-align: center;">
+        <div>
+          <h1>Cabinet Refinishing, Redefined</h1>
+          <p>Transform your space with bold finishes and masterful refinishing. TrueGrain delivers premium results—without the cost of a full remodel.</p>
+          <a href="#quote" class="button">Request a Free Quote</a>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1595526114035-2a304c0b163c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; height: 90vh; display: flex; justify-content: center; align-items: center; color: white; text-align: center;">
+        <div>
+          <h1>Affordable Luxury</h1>
+          <p>Our finishes look like new — without the cost or mess of full cabinet replacements.</p>
+          <a href="#quote" class="button">View Our Work</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <section id="quote">
+    <h2>Request a Free Estimate</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" enctype="multipart/form-data" class="form-group" id="quote-form">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <textarea name="message" placeholder="Tell us about your cabinets..." rows="5" required></textarea>
+      <label>Upload Cabinet Photos:</label>
+      <input type="file" name="photos" multiple accept="image/*" capture="environment" id="photo-upload">
+<div id="preview-container"></div>
+      <button type="submit">Submit My Request</button>
+    </form>
+<div style="text-align:center; margin-top: 40px;">
+  <h3>Book Your Consultation Instantly</h3>
+  <iframe src="https://outlook.office365.com/owa/calendar/TrueGrainRefinishing1@TrueGrainRefinishing.com/bookings/" style="width:100%; max-width:600px; height:500px; border:0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" allowfullscreen></iframe>
+</div>
+  <section>
+  <h2>What Our Clients Say</h2>
+  <div class="swiper testimonial-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <blockquote>
+          “TrueGrain made our cabinets look brand new. The finish is flawless!”<br><strong>- Sarah M., Shrewsbury MA</strong>
+        </blockquote>
+      </div>
+      <div class="swiper-slide">
+        <blockquote>
+          “The team was professional, clean, and fast. Can’t recommend them enough.”<br><strong>- Jason K., Worcester MA</strong>
+        </blockquote>
+      </div>
+      <div class="swiper-slide">
+        <blockquote>
+          “Our kitchen looks completely transformed — and we saved thousands.”<br><strong>- Melissa R., Holden MA</strong>
+        </blockquote>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<section>
+  <h2>Before & After</h2>
+  <div style="max-width:600px; margin:auto;">
+    <div style="position:relative; overflow:hidden;">
+      <img src="https://via.placeholder.com/600x400?text=Before" style="width:100%; position:absolute; top:0; left:0; z-index:1; clip: rect(0, 300px, 400px, 0);" id="after-img">
+      <img src="https://via.placeholder.com/600x400?text=After" style="width:100%;">
+      <input type="range" min="0" max="100" value="50" id="slider" style="position:absolute; bottom:10px; left:0; width:100%; z-index:2;">
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Refinishing Insights</h2>
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+    <div>
+      <h3>Cabinet Refinishing vs. Refacing</h3>
+      <p>Understand the difference and find out which option gives you the best return.</p>
+    </div>
+    <div>
+      <h3>Kitchen Color Trends in 2025</h3>
+      <p>Explore what finishes are trending this year and how to choose the right one for your space.</p>
+    </div>
+    <div>
+      <h3>3 Reasons to Choose Refinishing</h3>
+      <p>Refinishing is fast, affordable, and beautiful. Here’s why more homeowners are choosing it.</p>
+    </div>
+  </div>
+<section>
+  <h2>Download Our Free Refinishing Guide</h2>
+  <p style="text-align:center; max-width:800px; margin:0 auto 30px;">Discover everything you need to know about the refinishing process, how to prepare, and what to expect — all in one beautifully designed guide.</p>
+  <div style="text-align:center;">
+    <a href="/downloads/TrueGrain_Refinishing_Guide.pdf" download style="background: var(--accent-gold); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1rem;">Download Free PDF</a>
+  </div>
+</section>
+</section>
+
+  <footer>
+    <p>&copy; 2025 TrueGrain Refinishing. Crafted for transformation. All rights reserved.</p>
+  <div style="margin-top: 40px; text-align: center;">
+  <h3>Payment Options Available</h3>
+  <p>We offer flexible payment plans with interest available for qualifying projects.</p>
+  <p>Ask about financing options during your estimate appointment.</p>
+</div>
+</footer>
+<script>
+  const upload = document.getElementById('photo-upload');
+  const preview = document.getElementById('preview-container');
+  upload.addEventListener('change', () => {
+    preview.innerHTML = '';
+    [...upload.files].forEach(file => {
+      const reader = new FileReader();
+      reader.onload = e => {
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        img.style.maxWidth = '100px';
+        img.style.margin = '10px';
+        img.style.borderRadius = '8px';
+        img.style.boxShadow = '0 0 5px rgba(0,0,0,0.1)';
+        preview.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    effect: 'fade',
+    speed: 1000
+  });
+</script>
+<script>
+  const slider = document.getElementById('slider');
+  const afterImg = document.getElementById('after-img');
+  slider.addEventListener('input', () => {
+    afterImg.style.clip = `rect(0, ${afterImg.width * (slider.value / 100)}px, ${afterImg.height}px, 0)`;
+  });
+</script>
+<script>
+  const testimonialSwiper = new Swiper('.testimonial-slider', {
+    loop: true,
+    autoplay: { delay: 6000 },
+    pagination: { el: '.swiper-pagination' },
+    effect: 'slide'
+  });
+</script>
+<div class="cta-banner">
+  <span>Book your free cabinet consultation today!</span>
+  <button onclick="window.location.href='#quote'">Get Estimate</button>
+</div>
+<div id="popup" style="display:none; position:fixed; top:20%; left:50%; transform:translateX(-50%); background:white; color:#1f1f1f; padding:30px; box-shadow:0 0 20px rgba(0,0,0,0.2); border-radius:10px; z-index:10000; text-align:center; max-width:90%; width:400px;">
+  <h3>Get Your Dream Kitchen</h3>
+  <p>Upload your cabinet photos now and request a free quote!</p>
+  <button onclick="window.location.href='#quote'" style="margin-top: 20px; background: #c6a664; color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-weight: 600;">Start Now</button>
+  <br><br>
+  <a href="#" onclick="document.getElementById('popup').style.display='none'; return false;" style="font-size: 0.9rem; color: #555; text-decoration: underline;">No thanks</a>
+</div>
+<script>
+  setTimeout(() => {
+    document.getElementById('popup').style.display = 'block';
+  }, 10000);
+</script>
+<script>
+  document.addEventListener('mouseleave', function (e) {
+    if (e.clientY < 0) {
+      const popup = document.getElementById('popup');
+      if (popup && popup.style.display !== 'block') {
+        popup.style.display = 'block';
+      }
+    }
+  });
+</script>
 </body>
 </html>
